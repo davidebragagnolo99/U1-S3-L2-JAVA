@@ -25,6 +25,13 @@ public class Application {
         Ev.deleteById(1);
 
         Evento eventoTrovato2 = Ev.findById(2);
-        if (eventoTrovato2 != null)
+        if (eventoTrovato2 != null) {
+            eventoTrovato2.setTipo(TipoEvento.PRIVATO);
+            System.out.println(eventoTrovato2);
+            em.refresh(eventoTrovato2);
+            System.out.println(eventoTrovato2);
+        }
+        em.close();
+        emf.close();
     }
 }

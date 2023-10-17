@@ -69,4 +69,16 @@ public class Evento {
     public int getId() {
         return Id;
     }
+
+    @Override
+    public String toString() {
+        return "Evento{" +
+                "Id=" + Id +
+                ", Titolo='" + Titolo + '\'' +
+                ", DataEvento=" + DataEvento +
+                ", Descrizione='" + Descrizione + '\'' +
+                ", tipo=" + tipo +
+                ", numeroMassimoPartecipanti=" + numeroMassimoPartecipanti +
+                '}';
+    }
 }
